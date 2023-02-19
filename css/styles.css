@@ -287,11 +287,10 @@ body {
 
 .icon-team {
   padding: 12px 12px;
-  fill: var(--white-color);
 }
 
-.icon-team:hover,
-.icon-team:focus {
+.team-link:hover,
+.team-link:focus {
   background: var(--secondary-brand-color)
 }
 
@@ -319,8 +318,6 @@ body {
   padding: 16px 32px;
   border: 1px solid var(--helper-text-color);
   border-radius: 4px;
-  width: 168px;
-  height: 88px;
 }
 
 .customers-icon:hover,
