@@ -407,7 +407,7 @@ body {
   border-radius: 4px;
 
   color: var(--primary-brand-color);
-  background: var(--background-color);
+  background: var(--cloud-color);
 
   font-family: inherit;
   font-weight: 500;
