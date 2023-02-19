@@ -1,11 +1,13 @@
 :root {
   --primary-text-color: #434455;
-  --title--text-color: #2e2f42;
+  --navy-blue-color: #2e2f42;
   --primary-brand-color: #4d5ae5;
   --secondary-brand-color: #404bbf;
   --accent-color: #e7e9fc;
-  --background-color: #f4f4fd;
+  --cloud-color: #f4f4fd;
   --white-color: #ffffff;
+  --success-color: #31D0AA;
+  --helper-text-color: #8E8F99;
 }
 
 body {
@@ -69,7 +71,7 @@ body {
 }
 
 .logo-header {
-  color: var(--title--text-color);
+  color: var(--navy-blue-color);
 }
 
 .header {
@@ -96,7 +98,7 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
 
-  color: var(--title--text-color);
+  color: var(--navy-blue-color);
 
   font-weight: 500;
   text-decoration: none;
@@ -123,13 +125,13 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
 
-  color: var(--title--text-color);
+  color: var(--navy-blue-color);
 
   font-style: normal;
   text-decoration: none;
 }
 
-.contacts-item + .contacts-item {
+.contacts-item+.contacts-item {
   margin-left: 40px;
 }
 
@@ -138,11 +140,22 @@ body {
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
+  max-width: 1440px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 
-  background-color: var(--title--text-color);
+  background-color: var(--navy-blue-color);
+  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   text-align: center;
 }
+
+/* .hero-container {
+} */
 
 .hero-title {
   width: 494px;
@@ -183,7 +196,8 @@ body {
 
 .features-section,
 .our-work-section,
-.portfolio-section {
+.portfolio-section,
+.customers-section {
   padding-bottom: 120px;
 }
 
@@ -203,21 +217,33 @@ body {
   display: flex;
 }
 
-.item + .item {
+.item+.item {
   margin-left: 24px;
+}
+
+.container-icon {
+  margin-bottom: 8px;
+  width: 264px;
+  height: 112px;
+  background: var(--cloud-color);
+  border-radius: 4px;
+}
+
+.icon-features {
+  margin: 24px 100px;
 }
 
 .our-team-section {
   padding: 120px 0 120px 0;
 
-  background-color: var(--background-color);
+  background-color: var(--cloud-color);
 }
 
 .section-title {
   margin-top: 0;
   margin-bottom: 72px;
 
-  color: var(--title--text-color);
+  color: var(--navy-blue-color);
 
   font-size: 36px;
   line-height: 1.11;
@@ -231,7 +257,7 @@ body {
   margin-top: 0;
   margin-bottom: 8px;
 
-  color: var(--title--text-color);
+  color: var(--navy-blue-color);
 
   font-weight: 500;
   font-size: 20px;
@@ -261,13 +287,42 @@ body {
   background-color: var(--white-color);
 }
 
+.customers-section {
+  padding-top: 130px;
+}
+
+.customers-icon {
+  fill: var(--helper-text-color);
+  padding: 16px 32px;
+  border: 1px solid var(--helper-text-color);
+  border-radius: 4px;
+  width: 168px;
+  height: 88px;
+}
+
+.customers-icon:hover,
+.customers-icon:focus {
+  fill: var(--secondary-brand-color);
+  border-color: var(--secondary-brand-color);
+}
+
+.customers-link {
+  display: block;
+  width: 168px;
+  height: 88px;
+}
+
 /* Footer */
 .footer-section {
   padding-top: 100px;
   padding-bottom: 100px;
 
-  background-color: var(--title--text-color);
+  background-color: var(--navy-blue-color);
   color: var(--accent-color);
+}
+
+.footer-section .container {
+  display: flex;
 }
 
 .footer-section .logo {
@@ -278,7 +333,7 @@ body {
 }
 
 .logo-footer {
-  color: var(--background-color);
+  color: var(--cloud-color);
 }
 
 .footer-descr {
@@ -287,7 +342,44 @@ body {
   width: 264px;
 }
 
-/* Portfolio Main  */
+.social-media {
+  margin-left: 120px;
+}
+
+.social-media-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  color: var(--white-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.social-media-item+.social-media-item {
+  margin-left: 16px;
+}
+
+.social-media-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.icon-footer {
+  padding: 8px 8px;
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+  background-color: var(--success-color);
+}
+
+/* Portfolio */
 
 .portfolio-filter-button {
   padding: 12px 24px;
@@ -334,6 +426,11 @@ body {
   flex-basis: calc((100% / 3) - 24px);
   margin-left: 24px;
   margin-bottom: 48px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-content {
