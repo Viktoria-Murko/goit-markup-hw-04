@@ -319,17 +319,13 @@ body {
 }
 
 .customers-icon {
-  fill: var(--helper-text-color);
-}
-
-.customers-icon:hover,
-.customers-icon:focus {
-  fill: var(--secondary-brand-color);
+  fill: currentColor;
 }
 
 .customers-link:hover,
 .customers-link:focus {
   border-color: var(--secondary-brand-color);
+  color: var(--secondary-brand-color);
 }
 
 .customers-link {
@@ -340,6 +336,8 @@ body {
   height: 100%;
   border: 1px solid var(--helper-text-color);
   border-radius: 4px;
+
+  color: var(--helper-text-color);
 }
 
 /* Footer */
